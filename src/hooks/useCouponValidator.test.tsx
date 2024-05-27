@@ -8,7 +8,7 @@ import useCouponValidator from '@/hooks/useCouponValidator';
 describe('useCouponValidator test', () => {
   const date = new Date();
 
-  it('[유효한 쿠폰] 쿠폰의 유효성을 확인한 후 가능 여부를 알려준다. (존재 여부, 만료일 체크)', () => {
+  it('[유효한 쿠폰] 쿠폰의 유효성을 확인한 후 유효 여부를 알려준다. (존재 여부, 만료일 체크)', () => {
     const validCoupon: Coupon = {
       id: 2,
       code: 'VALID_COUPON',
@@ -39,7 +39,7 @@ describe('useCouponValidator test', () => {
     expect(result.current).toBe(true);
   });
 
-  it('[만료된 쿠폰] 쿠폰의 유효성을 확인한 후 가능 여부를 알려준다. (존재 여부, 만료일 체크)', () => {
+  it('[만료된 쿠폰] 쿠폰의 유효성을 확인한 후 유효 여부를 알려준다. (존재 여부, 만료일 체크)', () => {
     const expiredCoupon: Coupon = {
       id: 1,
       code: 'EXPIRED_COUPON',
