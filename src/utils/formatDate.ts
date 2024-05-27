@@ -9,7 +9,8 @@ export const formatDate = (dateString: string) => {
   return formattedDate;
 };
 
-export const formatHour = (timeString: string) => {
+type timeLiteral = `${number}:${number}:${number}`;
+export const formatHour = (timeString: timeLiteral) => {
   const [hours] = timeString.split(':').map(Number);
 
   let formattedHour;
