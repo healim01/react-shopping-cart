@@ -1,6 +1,6 @@
 import { CartItemType } from '@/types/cart.type';
 
-const MOCK_CART_LIST: CartItemType[] = [
+export const MOCK_CART_LIST: CartItemType[] = [
   {
     id: 624,
     quantity: 5,
@@ -50,5 +50,3 @@ const MOCK_CART_LIST: CartItemType[] = [
     },
   },
 ];
-
-export default MOCK_CART_LIST;
